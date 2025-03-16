@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_commerce_app/core/helper_functions/on_generate_routes.dart';
-import 'package:fruit_commerce_app/feature/presentation/views/splash_view.dart';
+import 'package:fruit_commerce_app/feature/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(
