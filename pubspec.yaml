@@ -30,7 +30,10 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   device_preview: ^1.2.0
+  dots_indicator: ^4.0.1
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.17
 
@@ -84,4 +87,6 @@ flutter_assets:
   assets_path: assets/images/
   output_path: lib/core/utils
   filename: app_images.dart
-  field_prefix: 
+  field_prefix: null
+flutter_intl:
+  enabled: true
