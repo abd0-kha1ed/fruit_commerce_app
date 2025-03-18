@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_commerce_app/core/utils/app_colors.dart';
 import 'package:fruit_commerce_app/core/utils/app_images.dart';
+import 'package:fruit_commerce_app/core/utils/app_styles.dart';
 import 'package:fruit_commerce_app/feature/on_boarding/presentation/views/widgets/page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
@@ -21,9 +23,18 @@ class OnBoardingPageView extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('مرحبًا بك في'),
-              Text('Fruit'),
-              Text('HUB'),
+              Text(
+                'مرحبًا بك في',
+                style: AppStyles.bold23,
+              ),
+              Text(
+                ' HUB',
+                style:
+                    AppStyles.bold23.copyWith(color: AppColors.kSecondaryColor),
+              ),
+              Text('Fruit',
+                  style: AppStyles.bold23
+                      .copyWith(color: AppColors.kPrimaryColor)),
             ],
           ),
         ),
@@ -38,9 +49,18 @@ class OnBoardingPageView extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('مرحبًا بك في'),
-              Text('Fruit'),
-              Text('HUB'),
+              Text(
+                'مرحبًا بك في',
+                style: AppStyles.bold23,
+              ),
+              Text(
+                ' HUB',
+                style:
+                    AppStyles.bold23.copyWith(color: AppColors.kSecondaryColor),
+              ),
+              Text('Fruit',
+                  style: AppStyles.bold23
+                      .copyWith(color: AppColors.kPrimaryColor)),
             ],
           ),
         )
