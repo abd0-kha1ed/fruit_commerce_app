@@ -13,9 +13,7 @@ class OnBoardingPageView extends StatelessWidget {
       controller: pageController,
       children: [
         PageViewItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) ==
-                  0,
+          isVisible: true,
           image: Assets.imagesOnBoarding1Image,
           backgroundImage: Assets.imagesOnBoarding1BackgroundImage,
           subtitle:
@@ -39,9 +37,7 @@ class OnBoardingPageView extends StatelessWidget {
           ),
         ),
         PageViewItem(
-          isVisible:
-              (pageController.hasClients ? pageController.page!.round() : 0) !=
-                  0,
+          isVisible: false,
           image: Assets.imagesOnBoarding2Image,
           backgroundImage: Assets.imagesOnBoarding2BackgroundImage,
           subtitle:
