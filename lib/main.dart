@@ -2,10 +2,13 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_commerce_app/core/helper_functions/on_generate_routes.dart';
+import 'package:fruit_commerce_app/core/services/shared_preferences_single_tone.dart';
 import 'package:fruit_commerce_app/feature/splash/presentation/views/splash_view.dart';
 import 'package:fruit_commerce_app/generated/l10n.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Prefs.init();
   runApp(
     DevicePreview(
       builder: (context) => const FruitHub(),
