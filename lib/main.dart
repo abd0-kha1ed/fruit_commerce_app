@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_commerce_app/core/helper_functions/on_generate_routes.dart';
 import 'package:fruit_commerce_app/core/services/shared_preferences_single_tone.dart';
+import 'package:fruit_commerce_app/core/utils/app_colors.dart';
 import 'package:fruit_commerce_app/feature/splash/presentation/views/splash_view.dart';
 import 'package:fruit_commerce_app/generated/l10n.dart';
 
@@ -23,6 +24,8 @@ class FruitHub extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Cairo',
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
       ),
       localizationsDelegates: [
         S.delegate,
