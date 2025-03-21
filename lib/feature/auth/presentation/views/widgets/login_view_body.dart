@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_commerce_app/constant.dart';
 import 'package:fruit_commerce_app/core/utils/app_colors.dart';
+import 'package:fruit_commerce_app/core/utils/app_images.dart';
 import 'package:fruit_commerce_app/core/utils/app_styles.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_button.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/dont_have_account.dart';
 import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/or_divider_widget.dart';
+import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/social_login_button.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -50,10 +52,27 @@ class LoginViewBody extends StatelessWidget {
               onPressed: () {},
             ),
             const SizedBox(height: 33),
-            DontHaveAccount(),
+            const DontHaveAccount(),
             const SizedBox(height: 33),
-            OrDividerWidget(),
+            const OrDividerWidget(),
             const SizedBox(height: 16),
+            SocialLoginButton(
+              title: 'تسجيل بواسطة جوجل',
+              image: Assets.imagesGoogleIcon,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 16),
+            SocialLoginButton(
+              title: 'تسجيل بواسطة أبل',
+              image: Assets.imagesAppleIcon,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 16),
+            SocialLoginButton(
+              title: 'تسجيل بواسطة فيسبوك',
+              image: Assets.imagesFacebookIcon,
+              onPressed: () {},
+            ),
           ],
         ),
       ),
