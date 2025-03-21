@@ -47,8 +47,9 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           dotsCount: 2,
           decorator: DotsDecorator(
             activeColor: AppColors.kPrimaryColor,
-            color: currentPage == 1 ? AppColors.kPrimaryColor :
-            AppColors.kPrimaryColor.withValues(alpha: 0.5),
+            color: currentPage == 1
+                ? AppColors.kPrimaryColor
+                : AppColors.kPrimaryColor.withValues(alpha: 0.5),
           ),
         ),
         const SizedBox(height: 29),
@@ -63,7 +64,8 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
               text: 'ابدأ الان',
               onPressed: () {
                 Prefs.setBool(kIsOnBoardingViewSeenKey, true);
-                Navigator.of(context).pushReplacementNamed((LoginView.routeName));
+                Navigator.of(context)
+                    .pushReplacementNamed((LoginView.routeName));
               },
             ),
           ),
