@@ -5,6 +5,7 @@ import 'package:fruit_commerce_app/core/utils/app_styles.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_button.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/dont_have_account.dart';
+import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/or_divider_widget.dart';
 
 class LoginViewBody extends StatelessWidget {
   const LoginViewBody({super.key});
@@ -50,6 +51,9 @@ class LoginViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 33),
             DontHaveAccount(),
+            const SizedBox(height: 33),
+            OrDividerWidget(),
+            const SizedBox(height: 16),
           ],
         ),
       ),
