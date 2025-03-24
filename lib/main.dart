@@ -1,19 +1,22 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fruit_commerce_app/core/helper_functions/on_generate_routes.dart';
 import 'package:fruit_commerce_app/core/services/shared_preferences_single_tone.dart';
 import 'package:fruit_commerce_app/core/utils/app_colors.dart';
 import 'package:fruit_commerce_app/feature/splash/presentation/views/splash_view.dart';
+import 'package:fruit_commerce_app/firebase_options.dart';
 import 'package:fruit_commerce_app/generated/l10n.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Prefs.init();
   runApp(
-    DevicePreview(
-      builder: (context) => const FruitHub(),
-    ),
+    const FruitHub(),
   );
 }
 
@@ -38,7 +41,6 @@ class FruitHub extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
       initialRoute: SplashView.routeName,
-      builder: DevicePreview.appBuilder,
     );
   }
 }
