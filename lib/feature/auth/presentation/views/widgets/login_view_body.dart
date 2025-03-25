@@ -73,6 +73,7 @@ class LoginViewBody extends StatelessWidget {
               image: Assets.imagesFacebookIcon,
               onPressed: () {},
             ),
+            const SizedBox(height: 16),
           ],
         ),
       ),

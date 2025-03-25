@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_commerce_app/constant.dart';
-import 'package:fruit_commerce_app/core/utils/app_colors.dart';
-import 'package:fruit_commerce_app/core/utils/app_styles.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_button.dart';
 import 'package:fruit_commerce_app/core/widgets/custom_text_form_field.dart';
 import 'package:fruit_commerce_app/feature/auth/presentation/views/widgets/condition_and_terms_widget.dart';
