@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -17,7 +18,7 @@ void main() async {
   await Prefs.init();
   setupGetIt();
   runApp(
-    const FruitHub(),
+    DevicePreview(builder: (context) => const FruitHub()),
   );
 }
 
@@ -31,6 +32,7 @@ class FruitHub extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
       ),
+      builder: DevicePreview.appBuilder,
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
