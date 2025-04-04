@@ -16,7 +16,7 @@ class SignupViewBodyBlocConsumer extends StatelessWidget {
         if (state is SignupSuccess) {}
         if (state is SignupFailure) {
           ScaffoldMessenger.of(context)
-              .showSnackBar(SnackBar(content: Text('${state.message}')));
+              .showSnackBar(SnackBar(content: Text(state.message)));
         }
       },
       builder: (context, state) {
