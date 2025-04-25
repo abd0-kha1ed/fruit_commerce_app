@@ -15,7 +15,7 @@ class CustomTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        if (value!.isEmpty) {
+        if (value == null || value.isEmpty) {
          return 'الحقل مطلوب'; 
         } else{
           return null;
